@@ -33,9 +33,9 @@ namespace DotNetCoreFileServer
                 FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "files")),
                 RequestPath = "/files",
                 EnableDirectoryBrowsing = true,
-                StaticFileOptions = { ServeUnknownFileTypes = true, DefaultContentType = "application/x-msdownload" }
+                StaticFileOptions = { ServeUnknownFileTypes = true, DefaultContentType = "application/octet-stream" }
             };
-            app.UseFileServer(true);
+            app.UseFileServer(fsOption);
         }
     }
 }
