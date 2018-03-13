@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  dotnetcorefileserver:
+    image: dotnetcorefileserver
+    build:
+      context: .
+      dockerfile: DotNetCoreFileServer/Dockerfile
